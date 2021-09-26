@@ -1,0 +1,15 @@
+
+.expense-show-case{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow:  3px 2px 15px -3px gray;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+.income{
+    margin-left: 60px;
+}
+.expense{
+    margin-right: 60px;
+}
