@@ -1,25 +1,5 @@
-
-.list{
-    width: 100%;
-    margin-top: -6px;
-}
-.list ul{
+ul{
     display: flex;
     flex-direction: column;
     margin-top: 0;
-}
-
-ul li{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-shadow:  3px 1px 5px 3px lightgray;
-    margin-left: -40px;
-    padding: 0 4px;
-    margin-top: 3px;
-}
-
-li p{
-    margin-top: 8px;
-    margin-bottom: 8px;
 }

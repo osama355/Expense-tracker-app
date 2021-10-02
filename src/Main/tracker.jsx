@@ -73,7 +73,7 @@ function Tracker() {
                 <h4 style={{ textTransform: "uppercase" }}>History</h4>
                 <hr />
             </div>
-            <div className="list">
+            <div className="list" >
                 <List items={items}/>
             </div>
             <div className="add-transaction">

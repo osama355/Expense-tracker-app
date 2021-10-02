@@ -1,0 +1,39 @@
+
+
+
+.item-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow:  3px 1px 5px 3px lightgray;
+    margin-left: -40px;
+    padding: 0 4px;
+    margin-top: 3px;
+}
+
+li p{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+
+.circle {
+    background: #f00;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color:black;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3px;
+    padding-left: 1px;
+    cursor: pointer;
+}
+
+.cross{
+    font-size: 0.8em;
+    color: #EAEDED;
+}
