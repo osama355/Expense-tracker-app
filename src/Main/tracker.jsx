@@ -8,14 +8,17 @@ import ShowCase from '../component/ExpenseShowCase/showcase'
 function Tracker() {
     const [items, setItems] = useState([
         {
+            id:1,
             itemName: 'Salary',
             amount: 50000,
         },
         {
+            id:2,
             itemName: 'Gym Fees',
             amount: -500
         },
         {
+            id:3,
             itemName: 'Electricity bill',
             amount: -5000
         }
@@ -63,6 +66,10 @@ function Tracker() {
         return expense
     }
 
+    const removeItem=id=>e=>{
+        setItems(items.filter((item)=>item.id!==id))
+    }
+
     console.log("rendering")
     return (
         <div className="main-container">
@@ -74,7 +81,7 @@ function Tracker() {
                 <hr />
             </div>
             <div className="list" >
-                <List items={items}/>
+                <List items={items} setItems={setItems} removeItem={removeItem}/>
             </div>
             <div className="add-transaction">
                 <h4 style={{ textTransform: "uppercase", marginTop: "-5px" }}>Add new transaction</h4>

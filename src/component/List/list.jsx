@@ -1,36 +1,13 @@
 import ListItem from "../listItem/listItem";
 import './list.css'
 
-function List({ items }) {
-  // const [over, setOver] = useState(false);
-
-  // const mouseOver = () => {
-  //   setOver(!over);
-  // };
+function List({ items, removeItem}) {
 
   return (
     <ul>
-      {items.map((item, i) => {
-        return <ListItem key={i} item={item} />;
-        // return (
-        //   <>
-        //     <li
-        //       key={i}
-        //       onMouseOver={mouseOver}
-        //       onMouseOut={mouseOver}
-        //       style={{
-        //         borderRight: `5px solid ${item.amount < 0 ? "red" : "green"}`,
-        //       }}
-        //       className="item-name"
-        //     >
-        //       <p>{item.itemName}</p>
-        //       <p>{item.amount}</p>
-        //       <div className="circle"  style={{ display: over ? "flex" : "none" }}>
-        //         <p className="cross">x</p>
-        //       </div>
-        //     </li>
-        //   </>
-        // );
+      {items.map((item) => {
+        item.id=Math.round(Math.random()*2358453)
+        return <ListItem key={item.id} item={item} removeItem={removeItem}/>;
       })}
     </ul>
   );

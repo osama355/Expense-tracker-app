@@ -1,9 +1,8 @@
 import React from "react";
 import "./listItem.css";
 
-function ListItem({ item }) {
+function ListItem({ item , removeItem}) {
   const [over, setOver] = React.useState(false);
-
   const mouseOver = () => {
     setOver(!over);
   };
@@ -18,10 +17,11 @@ function ListItem({ item }) {
         }}
         className="item-name"
       >
+        {/* <p>{item.id}</p> */}
         <p>{item.itemName}</p>
         <p>{item.amount}</p>
-        <div className="circle" style={{ display: over ? "flex" : "none" }}>
-          <p className="cross" >X</p>
+        <div className="circle" style={{ display: over ? "flex" : "none" }} onClick={removeItem(item.id)} >
+          <p className="cross">X</p>
         </div>
       </li>
     </>
