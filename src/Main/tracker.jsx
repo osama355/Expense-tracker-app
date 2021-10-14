@@ -24,28 +24,6 @@ function Tracker() {
         }
     ])
 
-    let [itemName, setItemName] = useState("")
-    let [amount, setAmount] = useState()
-
-    const inputChange1 = (e) => {
-        setItemName(e.target.value)
-    }
-
-    const inputChange2 = (e) => {
-        setAmount(e.target.value)
-    }
-
-    const submit = (e) => {
-        e.preventDefault()
-        setItems([
-            ...items,
-            {
-                itemName,
-                amount: Number(amount)
-            }
-        ])
-    }
-
     const totalIncome=()=>{
         let income=0
         for(var i=0; i<items.length; i++){
@@ -88,7 +66,7 @@ function Tracker() {
                 <hr />
             </div>
 
-            <Form  inputChange1={inputChange1} inputChange2={inputChange2} submit={submit}/>
+            <Form setItems={setItems} items={items}/>
         </div>
     )
 }
